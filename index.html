@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAPS GEARS</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="mainpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="top">
+          
+            <div class="menu-bar">
+                <div id="myNav" class="overlay">
+                    <a href="#" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-x fa-xs" style="color: #e9ac07;"></i></a>
+                    <div class="overlay-content">
+                        <a href="#">About</a>
+                        <a href="#">Services</a>
+                        <a href="#">Clients</a>
+                        <a href="#">Contact</a>
+                    </div>
+                 </div>
+                  <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa-solid fa-bars fa-sm" style="color: #e9ac07;"></i></span>
+                  <a href="./index.html"><img src="./images/LOGO.png" alt="" class="logo"></a>                
+            </div>
+
+            <div class="search">
+                <input type="text" id="searchbar" placeholder="Search Products...">
+                <i class="fa-solid fa-magnifying-glass fa-fade" style="color: #cd1818;"></i>
+            </div>
+            <div>
+              <h3 class="grandsale">GRAND <span>SALE</span></h3>
+            </div>
+
+            <div class="user-icons">
+              <div class="login">
+                <div id="login" class="login-overlay">
+                    <a href="#" class="closelogin" onclick="closelogin()"><i class="fa-solid fa-x fa-xs" style="color: #e9ac07;"></i></a>
+                    <div class="login-form">
+                      <h2>Login</h2>
+                      <form class="form">
+                        <div class="username">
+                          <p>Username :<i class="fa-solid fa-user" style="color: #000000;"></i><input type="text" placeholder="Type Your Username" required></p>
+                        </div>
+                        <div class="password"><p>Password :<i class="fa-solid fa-key" style="color: #000000;"></i><input type="password" placeholder="Type your password" required></p>
+                          
+                        </div>
+                      </form>
+                      <div class="fp"><a href="#">Forgot Password?</a></div>
+                      <button type="button" submit="#" class="loginbtn"><a href="#">Login</a></button>
+                      <div class="login-socialmedia">
+                      <p>or Login using</p>
+                          <div>
+                              <i class="fa-brands fa-facebook-f"></i>
+                              <i class="fa-brands fa-twitter"></i>
+                              <i class="fa-brands fa-google"></i>
+                          </div>
+                          <div class="signup">
+                              <p>New User? <a href="#signup">Create a Account</a></p>
+                          </div>
+                      </div>
+                    </div>
+                 </div>
+                  <span style="font-size:30px;cursor:pointer" onclick="openlogin()"><i class="fa-solid fa-user" style="color: #e9ac07;"></i></span>               
+              </div>
+              <div><i class="fa-solid fa-heart" style="color: #e9ac07;"></i></div>
+              <div><i class="fa-solid fa-cart-shopping " style="color: #e9ac07;"></i></div>   
+            </div>
+        </div>
+
+<!-- --------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <div class="navigation">
+            <nav class="navbar">
+              <ul class="menu">
+
+                <li class="menu-item">
+                <a href="#shop-by-bike">SHOP BY BIKE</a><i class="fa-solid fa-chevron-down fa-xs" style="color: #e9ac07;"></i>
+                  <ul class="submenu">
+
+                    <li class="brand">
+                      <a href="#royal-enfield">ROYAL ENFIELD</a>
+                      <ul class="models">
+                        <li><a href="#hunter-350">HUNTER 350</a></li>
+                        <li><a href="#himalayan">HIMALAYAN</a></li>
+                        <li><a href="#classic">CLASSIC</a></li>
+                        <li><a href="#standard">STANDARD</a></li>
+                        <li><a href="#thunderbird">THUNDERBIRD</a></li>
+                        <li><a href="#continental-gt">CONTINENTAL GT</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="brand"><a href="#ktm">KTM</a>
+                      <ul class="models">
+                        <li><a href="#duke-125">DUKE 125</a></li>
+                        <li><a href="#duke-200">DUKE 200</a></li>
+                        <li><a href="#duke-250">DUKE 250</a></li>
+                        <li><a href="#duke-390">DUKE 390</a></li>
+                        <li><a href="#rc-390">RC 390</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="brand"><a href="#yamaha">YAMAHA</a>
+                      <ul class="models">
+                        <li><a href="#mt15">MT 15</a></li>
+                        <li><a href="#r-3">R3</a></li>
+                        <li><a href="#r15-v1">R15 V1</a></li>
+                        <li><a href="#r15-v2">R15 V2</a></li>
+                        <li><a href="#r15-v3">R15 V3</a></li>
+                        <li><a href="#r15-v4">R15 V4</a></li> 
+                      </ul>
+                    </li>
+
+                    <li class="brand"><a href="#bajaj">BAJAJ</a>
+                      <ul class="models">
+                          <li><a href="#pulsar-220">PULSAR 220</a></li>
+                          <li><a href="#pulsar-ns-200">PULSAR NS 200</a></li>
+                          <li><a href="#pulsar-rs-200">PULSAR RS 200</a></li>
+                          <li><a href="#dominar-400">DOMINAR 400</a></li>
+                          <li><a href="#pulsar-150">PULSAR 150</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="brand"><a href="#honda">HONDA</a>
+                      <ul class="models">
+                        <li><a href="#hornet-160r">HORNET 160R</a></li>
+                        <li><a href="#cb-350rs">CB 350 RS</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+              <!-- --------------------------------------------------------------------- -->
+
+                <li class="menu-item">
+                <a href="#motorcycle-accessories">MOTORCYCLE ACCESSORIES</a><i class="fa-solid fa-chevron-down fa-xs" style="color: #e9ac07;"></i>
+                  <ul class="accessories-menu">
+
+                    <li class="category"><a href="#bike-protection">BIKE PROTECTION</a>
+                      <ul class="subcategories">
+                        <li><a href="#lock-system">LOCK SYSTEM</a></li>
+                        <li><a href="#crash-guard">CRASH GUARD</a></li>
+                        <li><a href="#frame-slider">FRAME SLIDER</a></li>
+                        <li><a href="#fluid-guards-and-cap">FLUID GUARDS AND CAP</a></li>
+                        <li><a href="#master-cylinder-guard">MASTER CYLINDER GUARD</a></li>
+                        <li><a href="#engine-guard-and-skid-plate">ENGINE GUARD AND SKID PLATE</a></li>
+                        <li><a href="#headlight-grill">HEADLIGHT GRILL</a></li>
+                        <li><a href="#radiator-grill">RADIATOR GRILL</a></li>
+                        <li><a href="#tank-protectors">TANK PROTECTORS</a></li>
+                        <li><a href="#body-cover">BODY COVER</a></li>
+                        <li><a href="#screen-protectors">SCREEN PROTECTORS</a></li>
+                        <li><a href="#stand-and-extenders">STAND AND EXTENDERS</a></li>
+                        <li><a href="#chain-cover-and-sprocket">CHAIN COVER AND SPROCKET</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="category"><a href="#handlebar-and-accessories">HANDLEBAR AND ACCESSORIES</a>
+                        <ul class="subcategories">
+                          <li><a href="#grips-and-throttles">GRIPS AND THROTTLES</a></li>
+                          <li><a href="#hand-guard">HAND GUARD</a></li>
+                          <li><a href="#handle-bars">HANDLE BARS</a></li>
+                          <li><a href="#handle-riser">HANDLE RISER</a></li>
+                          <li><a href="#lever-guards">LEVER GUARDS</a></li>
+                          <li><a href="#mirror">MIRROR</a></li>
+                          <li><a href="#mounts-and-chargers">MOUNTS AND CHARGERS</a></li>
+                          <li><a href="#handle-accessories">HANDLE ACCESSORIES</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="category"><a href="#lighting">LIGHTING</a>
+                      <ul class="subcategories">
+                          <li><a href="#tail-light">TAIL LIGHT</a></li>
+                          <li><a href="#auxiliary-light">AUXILIARY LIGHT</a></li>
+                          <li><a href="#light-accessories">LIGHT ACCESSORIES</a></li>
+                          <li><a href="#indicator">INDICATOR</a></li>
+                          <li><a href="#headlight">HEADLIGHT</a></li>
+                          <li><a href="#hazard-module">HAZARD MODULE</a></li>
+                          <li><a href="#fancy-led-light">FANCY LED LIGHT</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="category"><a href="#performance-accessories">PERFORMANCE ACCESSORIES</a>
+                      <ul class="subcategories">
+                          <li><a href="#airfilter">AIRFILTER</a></li>
+                          <li><a href="#exhaust">EXHAUST</a></li>
+                          <li><a href="#performance">PERFORMANCE</a></li>
+                          <li><a href="#exhaust-accessories">EXHAUST ACCESSORIES</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="category"><a href="#body-fairing-and-fenders">BODY FAIRING AND FENDERS</a>
+                      <ul class="subcategories">
+                        <li><a href="#body-fairing">BODY FAIRING</a></li>
+                        <li><a href="#fenders-and-extenders">FENDERS AND EXTENDERS</a></li>
+                        <li><a href="#tail-tidy">TAIL TIDY</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="category"><a href="#bike-essentials">BIKE ESSENTIALS</a>
+                      <ul class="subcategories">
+                        <li><a href="#windshield">WINDSHIELD</a></li>
+                        <li><a href="#winglet">WINGLET</a></li>
+                        <li><a href="#seat">SEAT</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+              <!-- --------------------------------------------------------------------- -->
+
+                <li class="menu-item">
+                <a href="#">RIDING GEARS</a><i class="fa-solid fa-chevron-down fa-xs" style="color: #e9ac07;"></i>
+                  <ul class="submenu gears">
+
+                    <li class="category"><a href="#rider-protection">RIDER PROTECTION</a>
+                      <ul class="subcategories">
+                        <li><a href="#jackets">JACKETS</a><li>
+                        <li><a href="#gloves">GLOVES</a><li>
+                        <li><a href="#pants">PANTS</a></li>
+                        <li><a href="#boots">BOOTS</a></li>
+                        <li><a href="#rider-guards">RIDER GUARDS</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="category"><a href="#casuals">CASUALS</a>
+                      <ul class="subcategories">
+                        <li><a href="#face-mask-balaclava">FACE MASK AND BALACLAVA</a></li>
+                        <li><a href="#rain-coats">RAIN COATS</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+              <!-- --------------------------------------------------------------------- -->
+
+                <li class="menu-item">
+                <a href="#luggage-touring">LUGGAGE & TOURING</a><i class="fa-solid fa-chevron-down fa-xs" style="color: #e9ac07;"></i>
+                  <ul class="submenu-luggage touring">
+
+                    <li class="category"><a href="#bags-backpacks">BAGS AND BACKPACKS</a>
+                      <ul class="models">
+                        <li><a href="#back-pack">BACK PACK</a></li>
+                        <li><a href="#saddle-bag">SADDLE BAG</a></li>
+                        <li><a href="#tank-bag">TANK BAG</a></li>
+                      </ul>
+                    </li>
+                    <li class="category"><a href="#luggage-accessories">LUGGAGE ACCESSORIES</a>
+                      <ul class="models">
+                        <li><a href="#aluminium-cases">ALUMINIUM TOP CASES AND PANNIERS</a></li>
+                        <li><a href="#plastic-cases">PLASTIC TOP CASE AND PANNIERS</a></li>
+                      </ul>
+                    </li>
+                    <li class="category"><a href="#carriers-backrest">CARRIERS AND BACKREST</a>
+                      <ul class="models">
+                        <li><a href="#carriers-rack">CARRIERS AND BACK RACK</a></li>
+                        <li><a href="#back-rest">BACK REST</a></li>
+                      </ul>
+                    </li>
+                    <li class="category"><a href="#touring-accessories">TOURING ACCESSORIES</a>
+                      <ul class="models">
+                        <li><a href="#saddle-stay">SADDLE STAY</a></li>
+                        <li><a href="#jerry-can">JERRY CAN AND MOUNTS</a></li>
+                        <li><a href="#bungee-cords">BUNGEE CORDS AND NETS</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+              <!-- --------------------------------------------------------------------- -->
+
+                <li class="menu-item">
+                <a href="#helmets-accessories">HELMETS & ACCESSORIES</a><i class="fa-solid fa-chevron-down fa-xs" style="color: #e9ac07;"></i>
+                  <ul class="helmets-accessories submenu">
+
+                    <li class="category"><a href="#helmets">HELMETS</a>
+                      <ul class="subcategories">
+                        <li><a href="#full-face-helmet">FULL FACE HELMET</a></li>
+                        <li><a href="#half-face-helmet">HALF FACE HELMET</a></li>
+                        <li><a href="#offroad-helmets">OFFROAD HELMETS</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="category"><a href="#accessories">ACCESSORIES</a>
+                      <ul class="subcategories">
+                        <li><a href="#googles">GOGGLES</a></li>
+                        <li><a href="#helmetaceessories">HELMET ACCESSORIES</a></li>
+                      </ul>
+                    </li>
+                    
+                    <li class="category"><a href="#ridertech">RIDER TECH</a>
+                      <ul class="subcategories">
+                        <li><a href="#actioncamera">ACTION CAMERA AND ACCESSORIES</a></li>
+                        <li><a href="#communication">COMMUNICATION</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+        </div>      
+    </header>
+<!-------------------------------------------------------------------------------------------------------------- -->
+    
+    <div class="slideshow-container">
+      <div class="imageslide">
+          <img class="mySlides fade" src="./images/main/bike image.webp">
+      
+          <img class="mySlides fade" src="./images/main/motor 1.webp">
+
+          <img class="mySlides fade" src="./images/main/luggage caryer.webp">
+
+          <img class="mySlides fade" src="./images/main/mobileholder.webp">
+            
+          <a class="prev"><i class="fa-solid fa-caret-left fa-2xl"></i></a>
+          <a class="next"><i class="fa-solid fa-caret-right fa-2xl"></i></a> 
+      </div>
+      
+    </div>
+      <br><br>
+      <div class="shop-bb">
+        <h2 class="sbb">Shop By Bike</h2>
+        <div class="shop-by-bike">
+          <div>
+            <figure><a href="#royal-enfield"><img src="./images/bikes/RE.webp" alt=""></a></figure>
+            <figcaption>Royal Enfield</figcaption>
+          </div>
+          <div>
+            <figure><a href="#ktm"><img src="./images/bikes/ktm.gif" alt=""></a></figure>
+            <figcaption>KTM</figcaption>
+          </div>
+          <div>
+            <figure><a href="#yamaha"><img src="./images/bikes/yamaha.png" alt=""></a></figure>
+            <figcaption>Yamaha</figcaption>
+          </div>
+          <div>
+            <figure><a href="#bajaj"><img src="./images/bikes/bajaj.webp" alt=""></a></figure>
+            <figcaption>Bajaj</figcaption>
+          </div>
+          <div>
+            <figure><a href="#honda"><img src="./images/bikes/honda.jpg" alt=""></a></figure>
+            <figcaption>Honda</figcaption>
+          </div>
+        </div>
+      </div>
+<!------------------------------------------------------------------------------------------------------------ -->
+      <div>
+        <h2 class="rg">Riding Gears</h2>
+        <div class="ridinggears">
+          <div class="box jacket">
+              <div class="jackets"><img src="./images/riding gears/jackets.png" alt=""></div>
+              <div class="name"><p>Jackets</p></div>
+          </div>
+          <div class="box">
+              <div class="gearsimg"><img class="gearsimg" src="./images/riding gears/glouse.png" alt=""></div>
+              <div class="name"><p>Glouse</p></div>
+          </div>
+          <div class="box">
+              <div class="gearsimg"><img class="gearsimg" src="./images/riding gears/boots.png" alt=""></div>
+              <div class="name"><p>Boots</p></div>
+          </div>
+          <div class="box">
+              <div class="gearsimg"><img class="gearsimg" src="./images/riding gears/pants.png" alt=""></div>
+              <div class="name"><p>Pants</p></div>
+          </div>
+          <div class="box">
+              <div class="gearsimg"><img class="gearsimg" src="./images/riding gears/knee guard.png" alt=""></div>
+              <div class="name"><p>Knee Gaurd</p></div>
+          </div>
+        </div>
+      </div>
+        
+<!------------------------------------------------------------------------------------------------------------ -->
+      <footer>
+        <div class="icons-with-text">
+          <div class="icons-box">
+            <i class="fa-solid fa-lock"></i>
+            <div>
+              <p>100%</p>
+              <p>Secure Payment</p>
+            </div> 
+          </div>
+
+          <div class="icons-box">
+            <i class="fa-regular fa-star"></i>
+            <div>
+              <p>100%</p>
+              <p>Quality Product</p>
+            </div> 
+          </div>
+
+          <div class="icons-box">
+            <i class="fa-solid fa-person-walking-arrow-loop-left"></i>
+            <div>
+              <p>Easy</p>
+              <p>Return Policy</p>
+            </div> 
+          </div>
+
+          <div class="icons-box">
+            <i class="fa-regular fa-comment-dots"></i>
+            <div>
+              <p>Chat</p>
+              <p>facility</p>
+            </div> 
+          </div>
+        </div>
+        <div class="end">
+          <div class="Connect-us">
+            <h4>Connect us <br>
+              <pre>
+                ABC, 999/0,
+                Near Velachery Bus Stop,
+                Velachery-P.O,
+                Chennai-600042
+              
+                Email: adithyakarunagaran.com
+              
+                Contact: +9196776534**
+              </pre>
+            </h4>  
+            <div class="social-media">
+                <button><a href="https://api.whatsapp.com/send/?phone=9196776534**&text=hi&type=phone_number   app_absent=0">MESSAGE US &nbsp;<i class="fa-brands fa-whatsapp"></i></a></button>
+              <div>
+                <a href="#instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#youtube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+          </div>   
+          <div class="end-links">
+            <h4>About&nbsp;VAPS</h4>
+            <div>
+              <a href="#about">About</a>
+              <a href="#photos">Photos</a>
+              <a href="#videos">Videos</a>
+              <a href="#connectus">Connect Us</a>
+              <a href="location">Location</a>
+              <a href="#brands">Brands</a>
+            </div>
+          </div>   
+          <div class="end-links">
+            <h4>Delivery&nbsp;&&nbsp;Returuns</h4>
+            <div>
+              <a href="#about">Privacy Policy</a>
+              <a href="#photos">Terms & Conditions</a>
+              <a href="#videos">Returns & Refunds</a>
+              <a href="#connectus">Cancellation Policys</a>
+              <a href="#brands">Shipping Policy</a>
+            </div>
+          </div>
+        
+          <div class="newsletter">
+            <h4>Newsletter</h4>
+            <p>Sign up for exclusive offers, <br>original stories, events and more.</p>
+            <div><input type="text" placeholder="Your Email"><i class="fa-solid fa-arrow-right" style="color:  #ffffff;"></i></div>
+          </div>
+        </div>
+        <div class="gototop"><i class="fa-solid fa-angles-up"></i></div>
+        <div class="endline"><p>&copy;2023 Vaps gears, powered by Adithya</p></div>
+      </footer>
+    <script src="script.js"></script>
+</body>
+</html>
