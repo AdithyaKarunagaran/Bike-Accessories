@@ -11,7 +11,7 @@
 .mySlides {
   display: inline-block;
   width: 100%; /* Set a fixed width */ /* Adjust as needed */
-  height: 550px; /* Set a fixed height */
+  height: 500px; /* Set a fixed height */
   vertical-align: top; 
 }    
 
@@ -50,48 +50,55 @@
   color: #fd1717;   
 } 
 
+
 .shop-bb {
-  width: 98%;
+  width: 100%;
   margin: auto;
-  height: 400px;
-}
-
-.sbb, .rg{
-  color: red;
-}
-
-.shop-by-bike {
-  display: flex;
-  flex-direction: row;
   height: auto;
-  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
 }
 
+.sbb{
+  color: red; 
+  margin-left: 0.5rem;
+}
+
+.shop-by-bike {
+  width: 12.2rem;
+  height: 13rem;
+  align-items: center;
+  text-wrap: wrap;
+} 
+
 .shop-by-bike img {
-  width: 220px;
-  height: 230px;
-  border-radius: 15px;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 10px;
   transition: 0.5s;
 }
 
 .shop-by-bike img:hover {
   border: #fd1717 4px solid;
-  width: 250px;
-  height: 250px;
-  box-shadow: 0 0 40px red;
+  width: 12.4rem;
+  height: 12.4rem;
+  border: 0.5px;
+  box-shadow: 0 0 30px red;
 }
 
 .shop-by-bike figcaption {
   color: #e9ac07;
   font-size: large;
   text-align: center;
+  text-wrap: wrap;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .rg{
     color: red;
-    padding-left: 15px;
+    margin-left: 1rem;
   }
 
 .ridinggears {
@@ -126,9 +133,8 @@
 }
 
 .name {
-    height: 50px;
-    width: 100%;
-    padding-left: 20px;
+    width: 90%;
+    padding-left: 1rem;
     font-size: 18px;
     font-family: cursive;
 }
@@ -154,12 +160,379 @@
 }
 
 .gearsimg img{
-    height: 150px;
-    width: 80%;
-    transition: 0.8s;
+  height: 150px;
+  width: 90%;
+  transition: 0.8s;
 }
 
 .gearsimg img:hover{
+  height: 170px;
+  width: 85%;
+}
+
+.helmets_tittle {
+  color: red;
+  padding-left: 15px;
+  margin-left: 1rem;
+}
+
+.helmets {
+  display: flex;
+  margin: 3px 10px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.helmets_box{
+  background-color: #ffde83;
+  width: 33%;
+  height: 400px;
+  font-size: 24px;
+  border: red 1px solid;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.helmets_img {
+  width: 85%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.helmets_img img{
+  height: 65%;
+  width: 65%;
+  transition: 0.8s;
+}
+
+.helmets_img img:hover{
+  height: 70%;
+  width: 70%;
+}
+
+.helmet_type {
+  width: 95%;
+  padding-left: 1rem;
+  font-size: 2rem;
+  font-family: cursive;
+}
+
+
+@media (max-width : 1024px) {
+  .mySlides {
+    height: 450px;
+  }
+
+  .shop-by-bike {
+    width: 10.2rem;
+    height: 11rem;
+  } 
+  
+  .shop-by-bike img {
+    width: 10rem;
+    height: 10rem;
+  }
+  .shop-by-bike figcaption {
+    font-size: 0.9rem;
+  }
+   
+  .shop-by-bike img:hover {
+    width: 10.4rem;
+    height: 10.4rem;
+    box-shadow: 0 0 20px red;
+  }
+}
+
+@media (max-width : 800px) {
+  .mySlides {
+    height: 400px;
+  }
+
+  .sbb {
+    font-size: 1.5rem;
+  }
+
+  .shop-by-bike {
+    width: 8.2rem;
+    height: 9rem;
+    text-wrap: wrap;
+  } 
+  
+  .shop-by-bike img {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .shop-by-bike figcaption {
+    font-size: 0.7rem;
+  }
+
+  .shop-by-bike img:hover {
+    width: 8.4rem;
+    height: 8.4rem;
+    box-shadow: 0 0 20px red;
+  }
+
+  .rg, .helmets_tittle {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+  }
+
+  .helmets_tittle {
+    font-size: 1.5rem;
+    margin-left: 0.1rem;
+    margin-top: 2rem;
+  }
+
+  .ridinggears {
+    grid-template-rows: 200px;
+    grid-auto-rows: 200px;
+    padding: 5px 5px;
+    gap: 5px;
+  }
+
+  .box {
+    font-size: 20px;
+  }
+
+  .jackets {
+    height: 370px;
+  }
+  .name {
+    padding-left: 0.8rem;
+  }
+
+  .jackets img {
+    height: 320px;
+  }
+
+  .jackets img:hover {
+    height: 350px;
+  }
+
+  .gearsimg {
     height: 170px;
-    width: 85%;
+  }
+
+  .gearsimg img{
+    height: 120px;
+    width: 110px;
+  }
+
+.gearsimg img:hover{
+    height: 150px;
+}
+}
+
+@media (max-width : 426px) {
+  
+  .mySlides {
+    height: 350px;
+  }
+
+  .prev, .next {
+    top: 48%;
+    padding: 5px;
+    font-size: 1rem;
+  }
+  
+  .sbb {
+    font-size: 1rem;
+  }
+
+  .shop-by-bike {
+    width: 4.7rem;
+    height: 5.5rem;
+    text-wrap: wrap;
+  } 
+  
+  .shop-by-bike img {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .shop-by-bike figcaption {
+    font-size: 0.6rem;
+  }
+   
+  .shop-by-bike img:hover {
+    width: 4.9rem;
+    height: 4.9rem; 
+    box-shadow: 0 0 10px red;
+  }
+
+  .rg, .helmets_tittle{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+  }
+
+  .ridinggears {
+    grid-template-rows: 170px;
+    grid-auto-rows: 170px;
+    padding: 5px 5px;
+    gap: 5px;
+  }
+
+  .box {
+    font-size: 15px;
+  }
+
+  .jackets {
+    height: 310px;
+  }
+  .name {
+    padding-left: 0.8rem;
+  }
+
+  .jackets img {
+    height: 270px;
+  }
+
+  .jackets img:hover {
+    height: 300px;
+  }
+
+  .gearsimg {
+    height: 140px;
+  }
+
+  .gearsimg img{
+    height: 110px;
+    width: 100px;
+  }
+
+  .gearsimg img:hover{
+    height: 130px;
+  }
+
+  .helmets_box {
+    height: 200px;
+  }
+
+  .helmets_img img {
+    width: 80%;
+  }
+
+  .helmets_img img:hover {
+    width: 90%;
+  }
+
+  .helmet_type {
+    padding-left: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width : 376px) {
+  .mySlides {
+    height: 200px;
+  }
+
+  .prev, .next {
+    top: 28%;
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+
+  .sbb {
+    font-size: 1rem;
+  }
+
+  .shop-by-bike {
+    width: 3.2rem;
+    height: 5rem;
+    text-wrap: wrap;
+  } 
+  
+  .shop-by-bike img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .shop-by-bike figcaption {
+    font-size: 0.6rem;
+  }
+   
+  .shop-by-bike img:hover {
+    width: 3.4rem;
+    height: 3.4rem;
+    border: 0.2px;
+    box-shadow: 0 0 10px red;
+  }
+
+  
+  .rg {
+    font-size: 1.1rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+  }
+
+  .helmets_tittle {
+    font-size: 1.1rem;
+    margin-left: 0.1rem;
+  }
+
+  .ridinggears {
+    grid-template-rows: 110px;
+    grid-auto-rows: 110px;
+    padding: 5px 5px;
+    gap: 5px;
+  }
+
+  .box {
+    font-size: 15px;
+  }
+
+  .jackets {
+    height: 200px;
+  }
+  .name {
+    padding-left: 0.2rem;
+    font-size: 0.7rem;
+  }
+
+  .jackets img {
+    height: 170px;
+  }
+
+  .jackets img:hover {
+    height: 190px;
+  }
+
+  .gearsimg {
+    height: 80px;
+  }
+
+  .gearsimg img{
+    height: 50px;
+    width: 70px;
+  }
+
+  .gearsimg img:hover{
+    height: 70px;
+  }
+
+  .helmets_box {
+    height: 150px;
+  }
+
+  .helmets_img img {
+    width: 80%;
+  }
+
+  .helmets_img img:hover {
+    width: 90%;
+  }
+
+  .helmet_type {
+    padding-left: 0.3rem;
+    font-size: 0.8rem;
+  }
 }
