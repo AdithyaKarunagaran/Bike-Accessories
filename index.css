@@ -1,8 +1,8 @@
 body {
-  width: 100%;
+  width: 100vw;
   margin: auto;
   overflow-x: hidden;
-  background-color: #000;
+  background-color: black;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -16,31 +16,61 @@ li {
 }
 
 header {
+  background-color: rgb(4, 4, 4);
   width: 100%;
-  background-color: black;
 }
 
 .top {
-  width: 100vw;
   background-color: black;
-  height: 80px;
+  width: 100vw;
+  height: 4rem;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   position: fixed;
   top: 0;
-  z-index: 1;
-  gap: 5vw;
-  padding-left: 3vw;
+  z-index: 2;
+  gap: 1rem;
 }
 
-.menu-bar {
+.logo-img {
+  width: 10rem;
+  height: 3rem;
+}
+
+.search {
+  background-color: white;
   display: flex;
-  gap: 2vw;
+  border-radius: 10px;
+  align-items: center;
+  padding: 0 1rem;
+  height: 2.5rem;
 }
 
-.fa-bars {
-  font-size: 2em;
+.search i {
+  cursor: pointer;
+  color: #cd1818;
 }
+
+.search input {
+  all: unset;
+  width: 24rem;
+  padding-right: 0.5rem;
+}
+
+.user-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;  
+  font-size: 2rem;
+  padding: 0 1rem;
+  gap: 2rem;
+  color: #e9ac07;
+  cursor: pointer;
+}
+
+
 .overlay {
   height: 100%;
   width: 0;
@@ -80,38 +110,9 @@ header {
 
 .overlay .closebtn {
   position: absolute;
-  top: 0%;
-  left: 2.5%;
-  font-size: 30px;
-}
-
-.logo {
-  width: 5vw;
-}
-
-.search {
-  background-color: white;
-  display: flex;
-  border-radius: 10px;
-  align-items: center;
-  width: 45vw;
-  height: 45px;
-  justify-content: space-between;
-}
-
-.search input {
-  outline: none;
-  border: none;
-  font-size: larger;
-  background-color: transparent;
-  width: 99%;
-}
-
-.user-icons {
-  display: flex;  
-  font-size: 2em;
-  gap: 30px;
-
+  top: 0.5rem;
+  right: 2rem;
+  font-size: 2rem;
 }
 
 .login-overlay {
@@ -230,13 +231,17 @@ header {
 
 .login-overlay .closelogin {
   position: absolute;
-  top: 3.5em;
-  right: 17.5em;
+  top: 18%;
+  right: 35%;
   font-size: 30px;
 }
 
+.closelogin i {
+  color: #e9ac07;
+}
 
 .grandsale {
+  font-size: 1rem;
   color: #e9ac07;
 }
 
@@ -248,7 +253,9 @@ header {
 
 .navigation {
   margin-top: 80px;
-  z-index: 2;
+  position: relative;
+  width: 100%;
+  z-index: 1;
 }
 
 .navigation.show-nav {
@@ -262,26 +269,46 @@ header {
 .menu {
   list-style-type: none;
   padding: 0;
-  width: 95vw;
+  width: 100vw; 
   display: flex;
+  text-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
-  position: relative;
-  margin: auto;
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch; 
+  scrollbar-width: 1rem; 
+  scrollbar-color: #888 #f1f1f1; 
 }
 
-.menu-item {
+#scrollLeft, #scrollRight {
+  display: none;
+}
+
+
+.menu::-webkit-scrollbar {
+  height: 6px; 
+}
+
+.menu::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.menu::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+
+.head-menu {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
-.menu-item i {
+.head-menu i {
   cursor: pointer;
 }
 
-.menu-item a {
+.head-menu a {
   display: block;
   color: white;
   text-decoration: none;
@@ -291,97 +318,73 @@ header {
   font-size: small;
 }
 
-.submenu,
-.accessories-menu,
-.submenu-luggage,
-.helmets-accessories,
-.gears,
-.touring {
-  display: none;
-  background-color: rgb(0, 0, 0 ,0.8);
+
+.sub-menu {
+  display: none; 
+  background-color: rgb(0, 0, 0, 0.8);
   z-index: 1;
-  padding: 1%;
-  flex-direction: row; 
-  justify-content: flex-start;
-  flex-wrap: wrap;  
-  position: relative;
-  width: max-content; 
-}
-
-.menu-item:hover .submenu,
-.menu-item:hover .accessories-menu,
-.menu-item:hover .submenu-luggage,
-.menu-item:hover .helmets-accessories,
-.menu-item:hover .gears,
-.menu-item:hover .touring {
-  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 400px; /* Fixed maximum height */
+  width: 100%; /* Adjust width as needed */
   position: absolute;
-  top: 100%;
   left: 0;
-  
+  top: 100%;
 }
 
-.brand,
+.head-menu:hover .sub-menu {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
 .category,
-.models,
-.subcategories {
+.sub-categories {
   list-style-type: none;
   padding: 0;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   margin-bottom: 10px;
 }
 
-.brand a,
 .category a,
-.models a,
-.subcategories a {
+.sub-categories a {
   padding: 8px 8px;
   color: red;
 }
 
-.brand ,
 .category {
   color: red;
 }
 
-.models li a,
-.subcategories li a {
+.sub-categories li a {
   font-weight: bold;
   display: block;
   margin-bottom: 5px;
-  text-decoration: none;
-}
-
-.models li a,
-.subcategories li a {
   color: #fff;
-  text-decoration: none;
   border-radius: 3px;
   font-size: 12px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: none;
 }
 
-.models li a:hover,
-.subcategories li a:hover {
-  color: #fd1717;
+.sub-categories li a:hover {
+  color: red;
 }
+
 
 footer {
   background-color: #e9ac07;
   margin-top: auto; 
   margin-bottom: 0;
-  padding: 1px; 
 }
  
 .icons-with-text {
   display: flex;
-  grid: 10px;
   flex-direction: row;
   background-color: rgb(189, 187, 187);
-  justify-content: space-between;
-  padding: 5px 30px;
+  justify-content: space-evenly;
+  padding: 0.5rem 1rem;
   align-items: center;
 }
 
@@ -483,8 +486,9 @@ footer {
 
 .newsletter div {
   background-color: black;
-  padding: 10px 10px;
+  padding: 0.5rem 0.5rem;
   border-radius: 5px;
+  text-wrap: wrap;
 }
 
 .newsletter input {
@@ -492,13 +496,544 @@ footer {
   border: none;
   background-color: transparent;
   padding: 5px 5px;
-  width: 300px;
+  width: 15rem;
   color: white;
 }
 
 .endline {
   border-top: 2px solid rgb(255, 255, 255);
   font-size: x-small;
-  margin-top: 15px;
+  margin-top: 1rem;
+  text-align: end;
+  margin-bottom: 0;
 }
 
+.gototop {
+  margin-top: -4rem;
+  display: flex;
+  width: 97%;
+  align-items: end;
+  justify-content: end;
+}
+
+.fa-angles-up {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.879);
+  background-color: #151414;
+  padding: 1rem 1rem;
+  border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+  .top {
+    gap: 0.5rem;
+  }
+  .logo-img {
+    width: 7rem;
+  }
+
+  .search {
+    width: 20rem;
+  }
+
+  .login-overlay .closelogin {
+    top: 9%;
+    right: 34%;
+  }
+  
+  .newsletter div {
+    padding: 0.2rem 0.2rem;
+    
+  }
+  
+  .newsletter input {
+    width: 7rem;
+  }
+  
+}
+
+
+@media (max-width: 890px) {
+  .top {
+    width: 100%;
+    gap: 0rem;
+  }
+  .logo-img {
+    width: 4rem;
+    height: 2rem;
+  }
+
+  .search {
+    width: 9rem;
+  }
+
+  .search input {
+    all: unset;
+    width: 7rem;
+    padding-right: 0.5rem;
+  }
+
+  .login-overlay .closelogin {
+    top: 8%;
+    right: 30%;
+  }
+
+  .icons-with-text {
+    padding: 0.5rem 0.5rem;
+  }
+  
+  .icons-box {
+    gap: 2px;
+    flex-direction: column;
+  }
+  
+  .icons-box i {
+    font-size: 2rem;
+  }
+
+  .icons-box p {
+    font-size: 1rem;
+  }
+
+  .end {
+    gap: 1rem;
+  }
+  
+  .newsletter div {
+    padding: 0rem 0rem;
+    
+  }
+  
+  .newsletter input {
+    width: 5rem;
+  } 
+
+  .social-media div {
+    font-size: 1rem;
+    gap: 15px;
+  }
+
+  .end-links div {
+    font-size: 1rem;
+    gap: 15px;
+  }
+
+  .fa-angles-up {
+    font-size: 1.5rem;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .top {
+    width: 100%;
+    gap: 0rem;
+  }
+  .logo-img {
+    width: 3.5rem;
+    height: 2rem;
+  }
+
+  .search {
+    width: 8rem;
+  }
+
+  .search input {
+    all: unset;
+    width: 6rem;
+    padding-right: 0.4rem;
+  }
+
+  .grandsale {
+    font-size: 0.5rem;
+  }
+  .grandsale span {
+    padding: 0.1rem 0.1rem;
+    font-size: 0.5rem;
+  }
+
+  .login-overlay .closelogin {
+    top: 9%;
+    right: 28%;
+  }
+
+  .end {
+    gap: 1vw;
+    padding: 1rem 1rem;
+    padding-bottom: 0;
+  }
+
+  .Connect-us {
+    padding-right: 0;
+  }
+
+  .end h4 {
+    font-size: 0.5rem;
+  }
+
+  .Connect-us pre {
+    font-size: 0.7rem;
+    margin-top: 10px;
+  }
+
+  .Connect-us button {
+    padding: 5px 5px;
+    font-size: 0.7rem;
+    border-radius: 10px;
+  }
+
+  .social-media  {
+    gap: 10px;
+  }
+
+  .social-media div {
+    gap: 20px;
+  }
+
+  .social-media-icons i {
+    font-size: 1.2rem;
+  }
+
+  .end-links h4 {
+    font-size: 0.5rem;
+  }
+
+  .end-links div {
+    font-size: 0.8rem;
+    gap: 20px;
+  }
+
+  .newsletter p {
+    font-size: 0.8rem;
+  }
+  
+  .newsletter div {
+    padding: 0rem 0rem;
+    
+  }
+  
+  .newsletter input {
+    width: 6rem;
+  }
+
+  .gototop {
+    margin-top: -3rem;
+  }
+
+  .fa-angles-up {
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+  }
+  
+}
+
+@media (max-width : 613px) {
+
+  .top {
+    width: 100%;
+    height: 2rem;
+  }
+  .logo-img {
+    width: 3rem;
+    height: 1.5rem;
+  }
+
+  .search {
+    width: 6rem;
+    height: 1.5rem;
+    border-radius: 5px;
+  }
+
+  .search input {
+    all: unset;
+    font-size: 0.5rem;
+    width: 5rem;
+    height: 1.5rem;
+    padding-right: 0.4rem;
+  }
+  
+  .user-icons {
+    font-size: 1.5rem;
+  }
+
+  .login-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .username i {
+    color: #cd1818;
+  }
+
+  .form input {
+    width: 8rem;
+    font-size: 0.8rem;
+  }
+
+  .fp a {
+    font-size: 0.8rem;
+  }
+
+  .loginbtn {
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.7rem;
+  }
+
+  .loginbtn a {
+    font-size: 0.8rem;
+  }
+
+  .login-socialmedia {
+    font-size: 1rem;
+  }
+
+  .login-socialmedia p {
+    font-size: 0.8rem;
+  }
+
+  .login-socialmedia i {
+    font-size: 1rem;
+    padding: 0.5rem 0.4rem;
+  }
+
+  .signup p,a {
+    font-size: 0.8rem;
+  }
+
+  .login-overlay .closelogin {
+    top: 17%;
+    right: 24%;
+  }
+
+  .icons-with-text {
+    padding: 0rem 0rem;
+  }
+  
+  .icons-box {
+    gap: -2px;
+    flex-direction: column;
+  }
+  
+  .icons-box i {
+    font-size: 1.5rem;
+  }
+
+  .icons-box p {
+    font-size: 0.5rem;
+  }
+
+  .end {
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+    padding-bottom: 0;
+    flex-wrap: wrap;
+  }
+
+  .Connect-us {
+    padding-right: 0;
+  }
+
+  .end h4 {
+    font-size: 1rem;
+  }
+
+  .Connect-us h4 {
+    font-size: 0.8rem;
+  }  
+  .Connect-us pre {
+    display: none;
+  }
+
+  .social-media button {
+    padding: 2px 2px;
+    font-size: 0.5rem;
+    border-radius: 10px;
+  }
+
+  .social-media a {
+    font-size: 0.5rem;
+  }
+
+  .social-media div {
+    gap: 5px;
+  }
+
+  .social-media-icons i {
+    font-size: 1rem;
+  }
+
+  .end-links h4 {
+    font-size: 0.8rem;
+  }
+
+  .newsletter p {
+    font-size: 0.8rem;
+  }
+  
+  .newsletter div {
+    padding: 0rem 0rem;
+    
+  }
+  
+  .newsletter input {
+    width: 5rem;
+  }
+
+  .gototop {
+    margin-top: -3rem;
+  }
+
+  .fa-angles-up {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .j {
+    display: none;
+  }
+}
+
+
+@media (max-width : 376px) {
+  .top {
+    width: 100%;
+    height: 2.2rem;
+  }
+  .logo-img {
+    width: 3rem;
+    height: 1.5rem;
+  }
+
+  .search {
+    width: 5rem;
+    height: 1.3rem;
+    border-radius: 5px;
+    padding: 0rem 0.7rem;
+  }
+
+  .search i {
+    font-size: 0.8rem;
+  }
+
+  .search input {
+    all: unset;
+    font-size: 0.5rem;
+    width: 4rem;
+    height: 1.2rem;
+    padding: 0rem 0.1rem;
+  }
+  
+  .grandsale {
+    display: none;
+  }
+
+  .navigation {
+    margin-top: 2.3rem;
+  }
+
+  .user-icons {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+
+
+  .login-overlay .closelogin {
+    top: 18%;
+    right: 20%;
+  }
+  
+  .icons-with-text {
+    margin-left: -1rem;
+    padding: 0.1rem 0rem;
+  }
+  
+  .icons-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icons-box i {
+    font-size: 1rem;
+  }
+
+  .icons-box div {
+    margin-top: -0.5rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  .icons-box p:last-child {
+    margin-top: -0.5rem;
+  }
+
+  .end {
+    gap: 0.5rem;
+    padding: 0rem 0.5rem;
+    padding-bottom: 0;
+    flex-wrap: wrap;
+  }
+
+  .Connect-us {
+    padding-right: 0;
+  }
+
+  .end h4 {
+    font-size: 1rem;
+    margin: 0.1rem;
+  }
+
+  .Connect-us h4 {
+    font-size: 0.8rem;
+  }  
+  .Connect-us pre {
+    display: none;
+  }
+
+  .social-media button {
+    padding: 2px 2px;
+    font-size: 0.5rem;
+    border-radius: 10px;
+  }
+
+  .social-media a {
+    font-size: 0.5rem;
+  }
+
+  .social-media div {
+    gap: 5px;
+  }
+
+  .social-media-icons i {
+    font-size: 0.8rem;
+  }
+
+  .end-links h4 {
+    font-size: 0.8rem;
+  }
+
+  .end-links div {
+    gap: 0.5rem;
+  }
+
+  .newsletter p {
+    font-size: 0.8rem;
+  }
+  
+  .newsletter div {
+    padding: 0rem 0rem;
+    
+  }
+  
+  .newsletter input {
+    width: 5rem;
+  }
+
+  .gototop {
+    margin-top: -3rem;
+  }
+
+  .fa-angles-up {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.5rem;
+  } 
+}
