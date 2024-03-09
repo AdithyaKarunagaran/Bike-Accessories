@@ -32,12 +32,12 @@ function showSlides() {
 function startSlideInterval() {
   slideInterval = setInterval(() => {
     showSlides();
-  }, 2000); // Change slide every 1.5 seconds
+  }, 2000); 
 }
 
 startSlideInterval();
 
-// Manual navigation
+
 document.querySelector('.prev').addEventListener('click', () => {
   slideIndex -= 2;
   if (slideIndex < 0) {
@@ -50,7 +50,7 @@ document.querySelector('.next').addEventListener('click', () => {
   showSlides();
 });
 
-// Reset the slide interval on any manual interaction
+
 document.querySelectorAll('.prev, .next').forEach(button => {
   button.addEventListener('click', () => {
     clearInterval(slideInterval);
@@ -58,3 +58,69 @@ document.querySelectorAll('.prev, .next').forEach(button => {
   });
 });
 
+
+document.addEventListener('DOMContentLoaded', function () {
+  const menuItems = document.querySelectorAll('.head-menu');
+
+  menuItems.forEach(item => {
+      item.addEventListener('mouseenter', function() {
+          
+          const submenu = this.querySelector('.sub-menu');
+          if (submenu) {
+              submenu.style.left = '0px';
+              submenu.style.top = `${item.getBoundingClientRect().bottom}px`;
+              submenu.style.position = 'fixed'; 
+              submenu.style.width = '100%'; 
+          }
+      });
+
+      item.addEventListener('mouseleave', function() {
+          const submenu = this.querySelector('.sub-menu');
+          if (submenu) {
+              submenu.style.left = ''; 
+              submenu.style.top = '';
+              submenu.style.position = '';
+          }
+      });
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const menu = document.querySelector('.menu');
+  const scrollLeft = document.getElementById('scrollLeft');
+  const scrollRight = document.getElementById('scrollRight');
+
+  const scrollAmount = 100;
+
+  scrollLeft.onclick = function() {
+      
+      menu.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  };
+
+  scrollRight.onclick = function() {
+      menu.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  };
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const menuItems = document.querySelectorAll('.head-menu');
+
+  function adjustSubmenuHeight() {
+    menuItems.forEach(item => {
+      const submenu = item.querySelector('.sub-menu');
+
+      if (submenu) {
+        const viewportHeight = window.innerHeight;
+        const menuBottom = item.getBoundingClientRect().bottom;
+        const maxHeight = viewportHeight - menuBottom;
+
+        submenu.style.maxHeight = `${maxHeight}px`;
+      }
+    });
+  }
+
+  adjustSubmenuHeight();
+
+  window.addEventListener('resize', adjustSubmenuHeight);
+});
