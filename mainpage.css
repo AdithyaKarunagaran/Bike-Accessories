@@ -253,6 +253,13 @@
     height: 400px;
   }
 
+
+  .prev, .next {
+    top: 40%;
+    padding: 5px;
+    font-size: 1rem;
+  }
+
   .sbb {
     font-size: 1.5rem;
   }
@@ -337,7 +344,7 @@
   }
 
   .prev, .next {
-    top: 48%;
+    top: 40%;
     padding: 5px;
     font-size: 1rem;
   }
